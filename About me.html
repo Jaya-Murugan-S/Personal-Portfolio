@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" href="C:\Users\jayam\OneDrive\Desktop\frontend\res\favicon.png" type="image/x-icon">
+        <title>Jaya_Murugan_S</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const aboutWrites = document.querySelectorAll('.about_write');
+                const aboutBox = document.querySelector('.about_box');
+            
+                function checkVisibility() {
+                    const boxRect = aboutBox.getBoundingClientRect();
+                    
+                    aboutWrites.forEach((element, index) => {
+                        const rect = element.getBoundingClientRect();
+                        if (rect.top >= boxRect.top && rect.bottom <= boxRect.bottom) {
+                            element.classList.add('visible');
+                        }
+                    });
+                }
+            
+                aboutBox.addEventListener('scroll', checkVisibility);
+                checkVisibility(); // Initial check when page loads
+            });
+            </script>
+           
+    </head>
+    <body style="overflow: hidden;">
+        <div id="particles-js"></div>
+        <script type="text/javascript" src="particles.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <header>
+            <div class="header-content">
+                <img src="res/favicon.png" alt="Logo" class="left-logo">
+                <h1>About Me</h1>
+            </div>
+            <span class="contact" align="right">
+                <a href="https://www.instagram.com/i__am__jayamurugan/" target="_blank"> <img src="res/instagram.svg" alt="instagram" ></a>
+                <a href="mailto:jayamurugan484@gmail.com" target="_blank"> <img src="res/email.svg" alt="email" ></a>
+                <a href="https://x.com/i_am_jaymurugan" target="_blank"> <img src="res/twitter.png" alt="Twitter" ></a>
+                <a href="https://github.com/Jaya-Murugan-S" target="_blank"><img src="res/github.png" alt="github"></a>
+                <a href="https://www.linkedin.com/in/jaya-murugan-49925a255/" target="_blank"><img src="res/linkedin.png" alt="linkedin"></a>
+            </span>
+        </header>
+        <span class="b">
+        <button class="button" id="back">
+            <img src="res/back.jpg" alt="back">
+            <span>Back to Home</span>
+        </button>
+        <button class="button" id="resume">
+            <img src="res/resume.png" alt="Resume">
+            <span>Resume</span>
+        </button>
+        <button class="button" id="proj">
+            <img src="res/project.png" alt="projects">
+            <span>Projects</span>
+        </button>
+        <button class="button" id="cert">
+            <img src="res/cert.jpg" alt="Certificates">
+            <span>Certificates</span>
+        </button>
+    </span>
+    <div class="about_cont">
+    <div class="about_box">
+        <div class="about_write">
+            <p >"Hey, I'm Jaya Murugan, born on 05.02.2003, your ultimate industrious soul.<br> My life motto? It's all about the groove of acceptance!"(Ambivert 😌)</p>
+        </div>
+        <div class="about_write">
+            <p class="heading">School Life</p>
+            <p>I completed my schooling at CK School of Practical Knowledge, achieving a stellar academic percentage of 96.8% in 10th grade and 88.8% in 12th grade</p>
+        </div>
+        <div class="about_write">
+            <p class="heading">College Life</p>
+            <p>I completed my undergraduate studies at Sri Manakula Vinayagar Engineering College in the Computer and Communication (CCE) domain, graduating with a strong academic percentage of 88.9%. Additionally, I served as the community chair for my department and actively participated in various events.</p>
+        </div>
+        <div class="about_write">
+            <p class="heading">My Skills</p>
+            <p>I am technically skilled in <br> Java,MySQL,HTML,CSS,javascript,MongoDB,Microsoft Excel,C/C++</p>
+        </div>
+        <div class="about_write">
+            <p class="heading">Contact Me At</p>
+            <img src="res/phone.png" alt="number" style="width: 25px; height: 25px;"><span  >Mobile Number:</span><span >7708673700</span><br>
+            <img src="res/address.png" alt="address" style="width: 25px; height: 25px;" ><span >Address:</span><span >No:23,Kesava Nagar,Thirupapuliyur,Cuddalore-2</span>
+        </div>
+    </div>
+</div>
+    <script>
+         document.getElementById('back').addEventListener('click', function() {
+            // Navigate back to Page 1
+                window.location.href = 'home.html'; // Replace with the path to your target HTML file
+         });
+         document.getElementById('proj').addEventListener('click', function() {
+            // Navigate back to Page 1
+                window.location.href = 'projects.html'; // Replace with the path to your target HTML file
+         });
+         document.getElementById('cert').addEventListener('click', function() {
+            // Navigate back to Page 1
+                window.location.href = 'activities.html'; // Replace with the path to your target HTML file
+         });
+         document.getElementById('resume').addEventListener('click', function() {
+            const link = document.createElement('a'); // Create a new anchor element
+        link.href = 'jayamurugan resmue.pdf'; // Replace with the path to your PDF file
+        link.download = 'jayamurgan resume.pdf'; // The name that the downloaded file will have
+        document.body.appendChild(link); // Append the anchor to the body
+        link.click(); // Simulate a click on the anchor
+        document.body.removeChild(link); // Remove the anchor from the document
+                
+     });
+    
+    </script>
+    </body>
+</html>

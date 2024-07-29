@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" href="C:\Users\jayam\OneDrive\Desktop\frontend\res\favicon.png" type="image/x-icon">
+        <title>Jaya_Murugan_S</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const projWrites = document.querySelectorAll('.proj_write');
+            
+                const observerOptions = {
+                    root: document.querySelector('.proj_box'),
+                    rootMargin: '0px',
+                    threshold: 0.1 // Adjust this to determine when the element is considered visible
+                };
+            
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        } else {
+                            entry.target.classList.remove('visible');
+                        }
+                    });
+                }, observerOptions);
+            
+                projWrites.forEach((element) => {
+                    observer.observe(element);
+                });
+            });
+            </script>
+            
+            
+    </head>
+    <body style="overflow: hidden;">
+        <div id="particles-js"></div>
+        <script type="text/javascript" src="particles.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <header>
+            <div class="header-content">
+                <img src="res/favicon.png" alt="Logo" class="left-logo">
+                <h1>Projects</h1>
+            </div>
+            <span class="contact" align="right">
+                <a href="https://www.instagram.com/i__am__jayamurugan/" target="_blank"> <img src="res/instagram.svg" alt="instagram" ></a>
+                <a href="mailto:jayamurugan484@gmail.com" target="_blank"> <img src="res/email.svg" alt="email" ></a>
+                <a href="https://x.com/i_am_jaymurugan" target="_blank"> <img src="res/twitter.png" alt="Twitter" ></a>
+                <a href="https://github.com/Jaya-Murugan-S" target="_blank"><img src="res/github.png" alt="github"></a>
+                <a href="https://www.linkedin.com/in/jaya-murugan-49925a255/" target="_blank"><img src="res/linkedin.png" alt="linkedin"></a>
+            </span>
+        </header>
+        <span class="b">
+        <button class="button" id="aboutme">
+            <img src="res/about me.png" alt="about me">
+            <span>About Me</span>
+        </button>
+        <button class="button" id="resume">
+            <img src="res/resume.png" alt="Resume">
+            <span>Resume</span>
+        </button>
+        <button class="button" id="back">
+            <img src="res/back.jpg" alt="back">
+            <span>Back to Home</span>
+        </button>
+        <button class="button" id="cert">
+            <img src="res/cert.jpg" alt="Certificates">
+            <span>Certificates</span>
+        </button>
+    </span>
+
+    <div class="proj_cont">
+        <div class="proj_box">
+            <a href="https://github.com/Jaya-Murugan-S/Tone_Tracker" target="_blank" style="text-decoration:none">
+            <div class="proj_write">
+                <p class="p_title">Tone Tracker<br>Offensive Language Detector</p>
+                <p class="p_des">An AI tool detecting offensive language on social media in Tamil and English, promoting a safer online environment.</p>
+                <p class="teche"><span>Technology Used:</span>BERT, LSTM, Python, relevant libraries</p>
+            </div></a>
+            <a href="https://github.com/Jaya-Murugan-S/Automatic-Window" target="_blank" style="text-decoration:none">
+            <div class="proj_write">
+                <p class="p_title">Automatic Window Using Raindrop Sensor</p>
+                <p class="p_des">A device that uses Arduino Uno and Intel Galileo board to automatically open and close windows when it rains.</p>
+                <p class="teche"><span>Technology Used:</span>Arduino Uno, Intel Galileo board</p>
+            </div></a>
+            <a href="https://github.com/Jaya-Murugan-S/CGPA-calculator" target="_blank" style="text-decoration:none">
+            <div class="proj_write">
+                <p class="p_title">CGPA and SGPA Calculator</p>
+                <p class="p_des">A web tool to calculate students' CGPA and SGPA, aiding in tracking academic performance and placement eligibility.</p>
+                <p class="teche"><span>Technology Used:</span>HTML, CSS, JavaScript</p>
+            </div></a>
+            <a href="https://github.com/Jaya-Murugan-S/Personal-Portfolio" target="_blank" style="text-decoration:none">
+            <div class="proj_write">
+                <p class="p_title">Personal Portfolio</p>
+                <p class="p_des">A personal portfolio website showcasing projects, skills, and achievements with a clean design and easy navigation.</p>
+                <p class="teche"><span>Technology Used:</span>HTML, CSS, JavaScript</p>
+            </div></a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('back').addEventListener('click', function() {
+           // Navigate back to Page 1
+               window.location.href = 'home.html'; // Replace with the path to your target HTML file
+        });
+        document.getElementById('aboutme').addEventListener('click', function() {
+           // Navigate back to Page 1
+               window.location.href = 'About me.html'; // Replace with the path to your target HTML file
+        });
+        document.getElementById('cert').addEventListener('click', function() {
+           // Navigate back to Page 1
+               window.location.href = 'activities.html'; // Replace with the path to your target HTML file
+        });
+        document.getElementById('resume').addEventListener('click', function() {
+           // Navigate back to Page 1
+           const link = document.createElement('a'); // Create a new anchor element
+        link.href = 'jayamurugan resmue.pdf'; // Replace with the path to your PDF file
+        link.download = 'jayamurgan resume.pdf'; // The name that the downloaded file will have
+        document.body.appendChild(link); // Append the anchor to the body
+        link.click(); // Simulate a click on the anchor
+        document.body.removeChild(link); // Remove the anchor from the document
+              
+        });
+   
+   </script>
+
+    </body>
+</html>

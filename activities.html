@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" href="C:\Users\jayam\OneDrive\Desktop\frontend\res\favicon.png" type="image/x-icon">
+        <title>Jaya_Murugan_S</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="overflow: hidden;">
+        <div id="particles-js"></div>
+        <script type="text/javascript" src="particles.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <header>
+            <div class="header-content">
+                <img src="res/favicon.png" alt="Logo" class="left-logo">
+                <h1>Certificates</h1>
+            </div>
+            <span class="contact" align="right">
+                <a href="https://www.instagram.com/i__am__jayamurugan/" target="_blank"> <img src="res/instagram.svg" alt="instagram" ></a>
+                <a href="mailto:jayamurugan484@gmail.com" target="_blank"> <img src="res/email.svg" alt="email" ></a>
+                <a href="https://x.com/i_am_jaymurugan" target="_blank"> <img src="res/twitter.png" alt="Twitter" ></a>
+                <a href="https://github.com/Jaya-Murugan-S" target="_blank"><img src="res/github.png" alt="github"></a>
+                <a href="https://www.linkedin.com/in/jaya-murugan-49925a255/" target="_blank"><img src="res/linkedin.png" alt="linkedin"></a>
+            </span>
+        </header>
+        <span class="b">
+        <button class="button" id="aboutme">
+            <img src="res/about me.png" alt="about me">
+            <span>About Me</span>
+        </button>
+        <button class="button" id="resume">
+            <img src="res/resume.png" alt="Resume">
+            <span>Resume</span>
+        </button>
+        <button class="button" id="proj">
+            <img src="res/project.png" alt="projects">
+            <span>Projects</span>
+        </button>
+        <button class="button" id="back">
+            <img src="res/back.jpg" alt="back">
+            <span>Back to Home</span>
+        </button>
+    </span>
+    <div class="c_cont">
+        <div class="c_box">
+            <div class="c_cert">
+                <img src="res/certi/nptel.png" alt="nptel">
+                <h3>Programming in Java</h3>
+                <p>#nptel #java</p>
+                
+            </div>
+            <div class="c_cert">
+                <img src="res/certi/android.png" alt="android">
+                <h3>Android App Development</h3>
+                <p>#internshala #kotlin #androidstudio</p>
+                
+            </div>
+            <div class="c_cert">
+                <img src="res/certi/aicte.png" alt="aicte">
+                <h3>Virtual Intership in AI-ML</h3>
+                <p>#aicte #ai</p>
+                
+            </div>
+            <div class="c_cert">
+                <img src="res/certi/az-900.png" alt="az">
+                <h3>Azure AI Fundamentals</h3>
+                <p>#microsoft #az-900</p>
+                
+            </div>
+            <div class="c_cert">
+                <img src="res/certi/pl-900.png" alt="pl-900">
+                <h3>Power Platform Fundamentals</h3>
+                <p>#microsoft #pl-900</p>
+                
+            </div>
+            <div class="c_cert">
+                <img src="res/certi/js.png" alt="js">
+                <h3>Introduction to Programming using JavaScript</h3>
+                <p>#javascript #microsoft</p>
+                
+            </div>
+            <div class="c_cert">
+                <img src="res/certi/codesoft.png" alt="codesoft">
+                <h3>Virtual Intership on Java Programming</h3>
+                <p>#codsoft</p>
+               
+            </div>
+            <div class="c_cert">
+                <img src="res/certi/coursera.png" alt="coursera">
+                <h3>Crash Course in Python</h3>
+                <p>#Coursera #python</p>
+                
+            </div>
+            <div class="c_cert">
+                <img src="res/certi/wipro.png" alt="wipro">
+                <h3>Wipro Certification</h3>
+                <p>#Skill #Development #Certification</p>
+                
+            </div>
+            <div class="c_cert">
+                <img src="res/certi/gccp.png" alt="gccp">
+                <h3>Google Cloud Career Practitioner Program 2022</h3>  
+            </div>
+            <div class="c_cert">
+                <img src="res/certi/guvi-face.png" alt="guvi">
+                <h3>Build a Face Recognition Application using Python</h3>
+                <p>#ai_for_India_event</p>
+                
+            </div>
+            
+            <!-- Add more certificates as needed -->
+        </div>
+    </div>
+    
+
+
+
+    <script>
+        document.getElementById('back').addEventListener('click', function() {
+           // Navigate back to Page 1
+               window.location.href = 'home.html'; // Replace with the path to your target HTML file
+        });
+        document.getElementById('proj').addEventListener('click', function() {
+           // Navigate back to Page 1
+               window.location.href = 'projects.html'; // Replace with the path to your target HTML file
+        });
+        document.getElementById('aboutme').addEventListener('click', function() {
+           // Navigate back to Page 1
+               window.location.href = 'About me.html'; // Replace with the path to your target HTML file
+        });
+        document.getElementById('resume').addEventListener('click', function() {
+            const link = document.createElement('a'); // Create a new anchor element
+        link.href = 'jayamurugan resmue.pdf'; // Replace with the path to your PDF file
+        link.download = 'jayamurgan resume.pdf'; // The name that the downloaded file will have
+        document.body.appendChild(link); // Append the anchor to the body
+        link.click(); // Simulate a click on the anchor
+        document.body.removeChild(link); // Remove the anchor from the document
+               
+        });
+   
+   </script>
+
+    </body>
+</html>
