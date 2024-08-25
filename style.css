@@ -26,7 +26,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: #896b6b;
-    z-index: -1; /* Ensure it's behind other content */
+    z-index: 0; /* Ensure it's behind other content */
 }
 
 /* Header styles */
@@ -561,6 +561,8 @@ header h1 {
     -ms-overflow-style: none;/* For IE and Edge */
     margin-top: 3%;
     position: relative;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .c_box::-webkit-scrollbar {
@@ -583,6 +585,7 @@ header h1 {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.3);
     text-align: center;
+    pointer-events: auto;
 }
 
 .c_cert:hover{
