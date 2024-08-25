@@ -409,7 +409,73 @@ header h1 {
         opacity: 1;
     }
 }
+.about_write {
+    
+    padding: 20px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    
+}
 
+.heading {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.contact-details, .map-container {
+    width: 48%; /* Side by side, with a small gap */
+}
+
+.contact-info {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.icon {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.value {
+    font-style: italic;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-details, .map-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
 
 
 
